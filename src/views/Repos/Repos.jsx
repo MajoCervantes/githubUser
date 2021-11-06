@@ -37,14 +37,23 @@ const Repos = () => {
 							href={r.html_url}
 							target='_blank'
 							rel='noreferrer'>
-							Repositorio: {r.html_url}
+							Ir al repositorio
 						</a>
+						{r.homepage && (
+							<a
+								className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5  user-button text-center'
+								href={r.homepage}
+								target='_blank'
+								rel='noreferrer'>
+								Ir a la App
+							</a>
+						)}
 						<p className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5  user-button text-center'>
 							Lenguaje: {r.language}
 						</p>
 						{r.description && (
 							<p className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5  user-button text-center'>
-								{r.description}
+								Descripción: {r.description}
 							</p>
 						)}
 						<p className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5  user-button text-center'>

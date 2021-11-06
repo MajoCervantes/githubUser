@@ -24,7 +24,7 @@ const Home = () => {
 			const API = `https://api.github.com/users/${user}`
 			const response = await fetch(API)
 			const result = await response.json()
-			// console.log(result)
+			console.log(result)
 			setUserInfo(result)
 			setLoader(false)
 			setUser("")
