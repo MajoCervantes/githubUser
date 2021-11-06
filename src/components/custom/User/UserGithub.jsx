@@ -44,19 +44,19 @@ const UserGithub = ({
 						Página de Github
 					</a>
 
-					<div className='flex mt-7 justify-evenly items-center w-full'>
-						<p className='bg-secondary text-white font-bold p-2 user-button'>
+					<div className='flex flex-col md:flex-row mt-7 justify-evenly items-center w-full'>
+						<p className='bg-secondary text-white font-bold p-2 user-button mb-5 md:mb-0'>
 							Sigue a: {following}
 						</p>
 
 						<Link to={`/followers/${githubName}`}>
-							<p className='bg-secondary text-white font-bold p-2 user-button'>
+							<p className='bg-secondary text-white font-bold p-2 user-button mb-5 md:mb-0'>
 								Lo siguen: {followers}
 							</p>
 						</Link>
 
 						<Link to={`/repos/${githubName}`}>
-							<p className='bg-secondary text-white font-bold p-2 user-button'>
+							<p className='bg-secondary text-white font-bold p-2 user-button mb-5 md:mb-0'>
 								Repositorios: {repos}
 							</p>
 						</Link>
@@ -73,18 +73,21 @@ const UserGithub = ({
 					<h1 className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5 lg:w-3/5 user-button'>
 						Usuario: {githubName}
 					</h1>
-					<a
-						href={github}
-						target='_blank'
-						rel='noreferrer'
-						className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5 lg:w-3/5 user-button'>
-						Página de Github
-					</a>
-					<Link to={`/repos/${githubName}`}>
-						<p className='bg-secondary text-white font-bold p-2 user-button mt-2'>
-							Repositorios
-						</p>
-					</Link>
+					<div className='flex flex-col mt-7 justify-evenly items-center w-full'>
+						{" "}
+						<a
+							href={github}
+							target='_blank'
+							rel='noreferrer'
+							className='bg-secondary p-2 text-white mt-2 font-bold mx-2 w-full md:w-4/5 lg:w-3/5 user-button mb-5 md:mb-0'>
+							Página de Github
+						</a>
+						<Link to={`/repos/${githubName}`}>
+							<p className='bg-secondary text-white font-bold p-2 user-button mt-2 mb-5 md:mb-0'>
+								Repositorios
+							</p>
+						</Link>
+					</div>
 				</div>
 			)}
 		</>

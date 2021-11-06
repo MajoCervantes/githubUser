@@ -9,7 +9,7 @@ const UserForm = ({
 	user,
 }) => {
 	return (
-		<div className='w-1/2 m-auto text-center mt-12'>
+		<div className='w-full md:w-1/2 m-auto text-center mt-12'>
 			<form
 				action=''
 				onSubmit={(e) => handleUserInfo(e)}>
